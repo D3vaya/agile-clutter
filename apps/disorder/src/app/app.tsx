@@ -1,15 +1,13 @@
-import React from 'react';
+import styles from './app.module.css';
+import NxWelcome from './nx-welcome';
+import { Card } from '@agile-clutter/ui/core';
+
 import '../../src/styles.css';
-const Card = ({ children }: { children: React.ReactElement }) => {
-  return <div className="bg-red bg-red-600 shadow">{children}</div>;
-};
 export function App() {
   return (
     <>
-      {/* <NxWelcome title="disorder" /> */}
-      <Card>
-        <h1 className="text-3xl font-bold underline">Hello world!</h1>
-      </Card>
+      <Card />
+      <NxWelcome title="disorder" />
     </>
   );
 }
