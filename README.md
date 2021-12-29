@@ -1,94 +1,234 @@
+<div id="top"></div>
+<!--
+*** Thanks for checking out the Best-README-Template. If you have a suggestion
+*** that would make this better, please fork the repo and create a pull request
+*** or simply open an issue with the tag "enhancement".
+*** Don't forget to give the project a star!
+*** Thanks again! Now go create something AMAZING! :D
+-->
 
+<!-- PROJECT SHIELDS -->
+<!--
+*** I'm using markdown "reference style" links for readability.
+*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
+*** See the bottom of this document for the declaration of the reference variables
+*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
+*** https://www.markdownguide.org/basic-syntax/#reference-style-links
+-->
 
-# AgileClutter
+[![MIT License][license-shield]][license-url]
 
-This project was generated using [Nx](https://nx.dev).
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <!-- <a href="https://github.com/othneildrew/Best-README-Template">
+    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  </a> -->
 
-<p style="text-align: center;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="450"></p>
+  <h3 align="center">Best-README-Template</h3>
 
-🔎 **Smart, Fast and Extensible Build System**
+  <p align="center">
+    An awesome README template to jumpstart your projects!
+    <!-- <br />
+    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://woming-poker.web.app/">View Demo</a>
+    ·
+    <a href="https://github.com/D3vaya/woming-poker/issues">Report Bug</a> -->
+    ·
+  </p>
+</div>
 
-## Adding capabilities to your workspace
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Tabla de contenido</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">Acerca del proyecto</a>
+      <ul>
+        <li><a href="#built-with">Construido con</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Comencemos !</a>
+      <ul>
+        <li><a href="#prerequisites">Pre-Requisitos</a></li>
+        <li><a href="#installation">Instalación</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Uso</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#contributing">Contribución</a></li>
+    <li><a href="#license">Licencia</a></li>
+    <li><a href="#contact">Contacto</a></li>
+    <li><a href="#acknowledgments">Agradecimientos</a></li>
+  </ol>
+</details>
 
-Nx supports many plugins which add capabilities for developing different types of applications and different tools.
+<!-- ABOUT THE PROJECT -->
 
-These capabilities include generating applications, libraries, etc as well as the devtools to test, and build projects as well.
+## About The Project
 
-Below are our core plugins:
+<img src="./src/icons/Room-Voting.png" alt="Logo" >
 
-- [React](https://reactjs.org)
-  - `npm install --save-dev @nrwl/react`
-- Web (no framework frontends)
-  - `npm install --save-dev @nrwl/web`
-- [Angular](https://angular.io)
-  - `npm install --save-dev @nrwl/angular`
-- [Nest](https://nestjs.com)
-  - `npm install --save-dev @nrwl/nest`
-- [Express](https://expressjs.com)
-  - `npm install --save-dev @nrwl/express`
-- [Node](https://nodejs.org)
-  - `npm install --save-dev @nrwl/node`
+Figma:
+[link](https://www.figma.com/file/vnhEYv8Gn1s6MVdfjiZWrq/Woming-Poker)
 
-There are also many [community plugins](https://nx.dev/community) you could add.
+<!-- There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it. -->
 
-## Generate an application
+<!-- Here's why:
 
-Run `nx g @nrwl/react:app my-app` to generate an application.
+- Your time should be focused on creating something amazing. A project that solves a problem and helps others
+- You shouldn't be doing the same tasks over and over like creating a README from scratch
+- You should implement DRY principles to the rest of your life :smile:
 
-> You can use any of the plugins above to generate applications as well.
+Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
 
-When using Nx, you can create multiple applications and libraries in the same workspace.
+Use the `BLANK_README.md` to get started. -->
 
-## Generate a library
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-Run `nx g @nrwl/react:lib my-lib` to generate a library.
+### Built With
 
-> You can also use any of the plugins above to generate libraries as well.
+<!-- - [Next.js](https://nextjs.org/) -->
 
-Libraries are shareable across libraries and applications. They can be imported from `@agile-clutter/mylib`.
+- [Vite js](https://vitejs.dev/)
+- [React.js](https://reactjs.org/)
+- [Firebase](https://firebase.google.com/)
 
-## Development server
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-Run `nx serve my-app` for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
+<!-- GETTING STARTED -->
 
-## Code scaffolding
+## Getting Started
 
-Run `nx g @nrwl/react:component my-component --project=my-app` to generate a new component.
+A continuación se detalla lo necesario para correr el proyecto
 
-## Build
+### Pre-requisitos
 
-Run `nx build my-app` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Node JS >= 12 y Npm
 
-## Running unit tests
+- [Link node js]("https://nodejs.org/es/")
+- npm
+  ```sh
+  npm install npm@latest -g
+  ```
 
-Run `nx test my-app` to execute the unit tests via [Jest](https://jestjs.io).
+### Installation
 
-Run `nx affected:test` to execute the unit tests affected by a change.
+Instalación de la App. En camino...
 
-## Running end-to-end tests
+<!-- 1. Clone the repo
+   ```sh
+   git clone https://github.com/D3vaya/woming-poker.git
+   ```
+2. Instale los paquetes npm.
+   ```sh
+   yarn install
+   ```
+3. ingrese las configuraciones de su app de firebase `src/firebase/client.ts`
+   ```ts
+   const firebaseConfig = {
+     apiKey: 'API_KEY',
+     authDomain: 'AUTH_DOMAIN',
+     projectId: 'PROJECT_ID',
+     storageBucket: 'BUCKET URL',
+     messagingSenderId: 'MESSAGE_SENDER_ID',
+     appId: 'APP_ID',
+     measurementId: 'MEASURENT_ID',
+   };
+   ```
+4. Ejecute el proyecto
 
-Run `ng e2e my-app` to execute the end-to-end tests via [Cypress](https://www.cypress.io).
+```sh
+  yarn dev
+``` -->
 
-Run `nx affected:e2e` to execute the end-to-end tests affected by a change.
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-## Understand your workspace
+<!-- USAGE EXAMPLES -->
 
-Run `nx dep-graph` to see a diagram of the dependencies of your projects.
+## Usage
 
-## Further help
+Uso de la App. En camino...
+[link](https://www.figma.com/file/vnhEYv8Gn1s6MVdfjiZWrq/Woming-Poker)
 
-Visit the [Nx Documentation](https://nx.dev) to learn more.
+<p align="right">(<a href="#top">back to top</a>)</p>
 
+<!-- ROADMAP -->
 
+## Roadmap
 
-## ☁ Nx Cloud
+- [ ] MVP
+- [ ] Migrar a Next.js
+- [ ] Agregar storybook.js
+- [ ] Multi-language Support
+  - [ ] Ingles
 
-### Distributed Computation Caching & Distributed Task Execution
+<!-- Ver las [incidencias abiertas](https://github.com/D3vaya/woming-poker/issues). -->
 
-<p style="text-align: center;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-cloud-card.png"></p>
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-Nx Cloud pairs with Nx in order to enable you to build and test code more rapidly, by up to 10 times. Even teams that are new to Nx can connect to Nx Cloud and start saving time instantly.
+<!-- CONTRIBUTING -->
 
-Teams using Nx gain the advantage of building full-stack applications with their preferred framework alongside Nx’s advanced code generation and project dependency graph, plus a unified experience for both frontend and backend developers.
+## Contributing
 
-Visit [Nx Cloud](https://nx.app/) to learn more.
+Las contribuciones son lo que hacen que la comunidad de código abierto sea un lugar tan increíble para aprender, inspirar y crear. Cualquier contribución que haga es ** muy apreciada **.
+
+Si tiene una sugerencia que mejoraría esto, bifurque el repositorio y cree una solicitud de extracción. También puede simplemente abrir un problema con la etiqueta "mejora".
+¡No olvides darle una estrella al proyecto! ¡Gracias de nuevo!
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- LICENSE -->
+
+## License
+
+Distribuido bajo licencia MIT.
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- CONTACT -->
+
+## Contact
+
+Your Name - [@d3vaya](https://twitter.com/d3vaya) - j.ayala.higuera@gmail.com
+
+Link del proyecto: [https://github.com/D3vaya/woming-poker](https://github.com/D3vaya/woming-poker)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- ACKNOWLEDGMENTS -->
+
+## Gratitud 🥰
+
+- [thenounproject](https://thenounproject.com/)
+- [Othneil Drew y su repositorio](https://github.com/othneildrew/Best-README-Template)
+- [Img Shields](https://shields.io)
+- [GitHub Pages](https://pages.github.com)
+- [Font Awesome](https://fontawesome.com)
+- [React Icons](https://react-icons.github.io/react-icons/search)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
+<!-- [contributors-shield]: https://github.com/D3vaya/woming-poker/graphs/contributors -->
+
+[forks-url]: https://github.com/D3vaya/woming-poker/network/members
+
+<!-- [issues-url]: https://github.com/D3vaya/woming-poker/issues -->
+
+[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
+
+<!-- [license-url]: https://github.com/D3vaya/woming-poker/blob/master/LICENSE -->
+
+<!-- [product-screenshot]: images/screenshot.png -->
