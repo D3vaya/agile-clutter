@@ -1,0 +1,28 @@
+{
+  "root": "apps/ui-core-e2e",
+  "sourceRoot": "apps/ui-core-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/ui-core-e2e/cypress.json",
+        "devServerTarget": "ui-core:storybook"
+      },
+      "configurations": {
+        "ci": {
+          "devServerTarget": "ui-core:storybook:ci"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/ui-core-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["ui-core"]
+}

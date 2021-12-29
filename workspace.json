@@ -2,6 +2,8 @@
   "version": 2,
   "projects": {
     "disorder": "apps/disorder",
-    "disorder-e2e": "apps/disorder-e2e"
+    "disorder-e2e": "apps/disorder-e2e",
+    "ui-core": "libs/ui/core",
+    "ui-core-e2e": "apps/ui-core-e2e"
   }
 }
