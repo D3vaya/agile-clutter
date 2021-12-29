@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "disorder": "apps/disorder",
+    "disorder-e2e": "apps/disorder-e2e"
+  }
+}
