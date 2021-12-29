@@ -70,7 +70,7 @@
 
 ## About The Project
 
-<img src="./src/icons/Room-Voting.png" alt="Logo" >
+<!-- <img src="./src/icons/Room-Voting.png" alt="Logo" > -->
 
 Figma:
 [link](https://www.figma.com/file/vnhEYv8Gn1s6MVdfjiZWrq/Woming-Poker)
@@ -201,7 +201,7 @@ Distribuido bajo licencia MIT.
 
 Your Name - [@d3vaya](https://twitter.com/d3vaya) - j.ayala.higuera@gmail.com
 
-Link del proyecto: [https://github.com/D3vaya/woming-poker](https://github.com/D3vaya/woming-poker)
+<!-- Link del proyecto: [https://github.com/D3vaya/woming-poker](https://github.com/D3vaya/woming-poker) -->
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
