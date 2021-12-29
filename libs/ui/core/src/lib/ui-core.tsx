@@ -5,8 +5,8 @@ export interface UiCoreProps {}
 
 export function UiCore(props: UiCoreProps) {
   return (
-    <div>
-      <h1>Welcome to UiCore!</h1>
+    <div className="bg-red bg-red-500">
+      <h1 className="font-bold">Welcome to UiCore!</h1>
     </div>
   );
 }
