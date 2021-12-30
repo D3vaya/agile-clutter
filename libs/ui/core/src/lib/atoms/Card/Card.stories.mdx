@@ -1,0 +1,49 @@
+import { Meta, Story, Canvas, Preview, Source } from '@storybook/addon-docs';
+
+import { Card } from './';
+import dedent from 'ts-dedent';
+
+<Meta title="Atoms/Card" component={Card} />
+
+# Component
+
+Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias totam quis, dignissimos quae, id nihil facilis eveniet atque consequatur nemo officia? Id ipsa expedita nulla nesciunt, tenetur magnam laboriosam pariatur!
+
+## **Pautas de uso**
+
+- They have patterned drop shadow to indicate that are outside the normal document flow.
+- This is a shared component for Toast, Dialog, and Coachmark; before using this component directly please check that these components do not cover your use case!
+
+<Story name="Default" args={{ color: 'blue', children: '40' }}>
+  {Card.bind({})}
+</Story>
+
+## **Variantes**
+
+Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias totam quis, dignissimos quae, id nihil facilis eveniet atque consequatur nemo officia? Id ipsa expedita nulla nesciunt, tenetur magnam laboriosam pariatur!
+
+<Canvas>
+  <Story name="Primary" args={{ color: 'red', children: '10' }}>
+    {Card.bind({})}
+  </Story>
+  <Story name="Secondary" args={{ color: 'lime', children: '?' }}>
+    {Card.bind({})}
+  </Story>
+</Canvas>
+
+## Tipado del componente
+
+detalle de la interfaz de las propiedades de **Component**
+
+<Source
+  language="typescript"
+  code={dedent`
+    export interface CardProps {
+      color: 'default' | 'white' | 'primary'
+      shadow?: boolean
+      shadowDirection?: 'left' | 'right'
+      border?: boolean
+      children: any
+    }
+  `}
+/>

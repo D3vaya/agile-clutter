@@ -1,0 +1,79 @@
+import { Meta, Story, Canvas, Preview, Source } from '@storybook/addon-docs';
+
+import { Avatar } from './index.tsx';
+import { ColorsExadecimals } from '../commons.ts';
+import dedent from 'ts-dedent';
+
+<Meta title="Atoms/Avatar" component={Avatar} />
+
+export const Template = (args) => <Avatar {...args} />;
+
+# Component
+
+Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias totam quis, dignissimos quae, id nihil facilis eveniet atque consequatur nemo officia? Id ipsa expedita nulla nesciunt, tenetur magnam laboriosam pariatur!
+
+## **Pautas de uso**
+
+- They have patterned drop shadow to indicate that are outside the normal document flow.
+- This is a shared component for Toast, Dialog, and Coachmark; before using this component directly please check that these components do not cover your use case!
+
+<Story name="white" args={{}}>
+  {Template.bind({})}
+</Story>
+
+## **Variantes**
+
+Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias totam quis, dignissimos quae, id nihil facilis eveniet atque consequatur nemo officia? Id ipsa expedita nulla nesciunt, tenetur magnam laboriosam pariatur!
+
+<Canvas>
+  <Story name="red" args={{ color: ColorsExadecimals.red }}>
+    {Template.bind({})}
+  </Story>
+  <Story name="purple" args={{ color: ColorsExadecimals.purple }}>
+    {Template.bind({})}
+  </Story>
+  <Story name="blue" args={{ color: ColorsExadecimals.blue }}>
+    {Template.bind({})}
+  </Story>
+  <Story name="cyan" args={{ color: ColorsExadecimals.cyan }}>
+    {Template.bind({})}
+  </Story>
+  <Story name="amber" args={{ color: ColorsExadecimals.amber }}>
+    {Template.bind({})}
+  </Story>
+  <Story name="lime" args={{ color: ColorsExadecimals.lime }}>
+    {Template.bind({})}
+  </Story>
+  <Story name="green" args={{ color: ColorsExadecimals.green }}>
+    {Template.bind({})}
+  </Story>
+  <Story name="emerald" args={{ color: ColorsExadecimals.emerald }}>
+    {Template.bind({})}
+  </Story>
+  <Story name="orange" args={{ color: ColorsExadecimals.orange }}>
+    {Template.bind({})}
+  </Story>
+  <Story name="sky" args={{ color: ColorsExadecimals.sky }}>
+    {Template.bind({})}
+  </Story>
+  <Story name="teal" args={{ color: ColorsExadecimals.teal }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Tipado del componente
+
+detalle de la interfaz de las propiedades de **Component**
+
+<Source
+  language="typescript"
+  code={dedent`
+    export interface CardProps {
+      color: 'default' | 'white' | 'primary'
+      shadow?: boolean
+      shadowDirection?: 'left' | 'right'
+      border?: boolean
+      children: any
+    }
+  `}
+/>

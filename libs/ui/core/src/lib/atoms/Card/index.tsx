@@ -1,21 +1,11 @@
-import { CardProps } from '../commons';
+import { CardProps, Colors } from '../commons';
 
 export const Card: React.FC<CardProps> = ({
-  cardNumber = '?',
-  variant = 'white',
+  children,
+  color = Colors.blue,
+  className,
 }) => {
-  const base =
-    'shadow-md rounded-md  border-2 border-black p-3 w-14 h-16 flex justify-center items-center';
-  const red = {
-    red: 'red',
-  };
-  const map = new Map<string, string>();
-  map.set('red', 'red');
-  return (
-    <div
-      className={`${base} bg-${map.get(variant)} bg-${map.get(variant)}-600`}
-    >
-      <span className="font-bold text-xl">{cardNumber}</span>
-    </div>
-  );
+  const base = `truncate bg-${color} bg-${color}-400 shadow-md rounded-md font-bold text-xl border border-black p-3 w-14 h-16 flex justify-center items-center`;
+
+  return <div className={`${base} ${className || ''}`}>{children}</div>;
 };
