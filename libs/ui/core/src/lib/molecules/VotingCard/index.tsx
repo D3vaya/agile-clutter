@@ -1,27 +1,58 @@
+import { Colors } from '../../commons';
 import { Card, Avatar } from '../../atoms';
-import { ColorsExadecimals, Colors } from '../../atoms/commons';
+import { VotingCardProps } from '../models';
 
-interface Props {
-  color?: ColorsExadecimals;
-}
-export const VotingCard: React.FC<Props> = ({
-  color = ColorsExadecimals.lime,
+export const VotingCard: React.FC<VotingCardProps> = ({
+  vote,
+  avatarColor,
+  className = '',
+  state = 'voting',
 }) => {
-  return (
-    <Card color={Colors.red}>
-      <div className="grid grid-rows-2 gap-1 justify-center content-center justify-items-center">
+  const baseTailwind = 'flex flex-col flex-nowrap justify-around items-center';
+  let color = Colors.white;
+  if (state === 'viewVote') {
+    color = avatarColor as Colors;
+  } else if (state === 'voted') {
+    color = 'violet' as Colors;
+  }
+
+  const votedState = () => {
+    return (
+      <div className="inline my-1">
         <Svg />
-        <Avatar size="sm" color={color} />
+      </div>
+    );
+  };
+
+  const votingState = () => {
+    return <Avatar size="sm" color={avatarColor} />;
+  };
+
+  const viewVoteState = () => {
+    return <span>{vote}</span>;
+  };
+
+  const map = new Map<string, () => JSX.Element>();
+  map.set('voted', votedState);
+  map.set('voting', votingState);
+  map.set('viewVote', viewVoteState);
+
+  const Component = map.get(state) as React.ElementType;
+
+  return (
+    <Card color={color}>
+      <div className={`${baseTailwind} ${className}`}>
+        <Component />
       </div>
     </Card>
   );
 };
 
-const Svg = () => {
+const Svg = ({ fill = '#ffffff' }: { fill?: string }) => {
   return (
     <svg
-      width="40"
-      height="24"
+      width="45"
+      height="29"
       viewBox="0 0 55 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -30,7 +61,7 @@ const Svg = () => {
         fillRule="evenodd"
         clipRule="evenodd"
         d="M54.44 17.2011C54.6027 17.7375 54.3853 18.08 53.8593 18.1451L50.8864 18.4965C50.4377 18.5473 50.0844 18.3535 49.9875 17.9146L47.3827 7.16756C47.3056 6.91228 47.1054 6.93708 47.0842 7.20405L46.5893 18.3157C46.5645 18.7687 46.2874 19.0422 45.8372 19.093L43.6887 19.3469C43.2385 19.403 42.9141 19.2011 42.7921 18.7649L39.9387 8.05159C39.8603 7.79652 39.6602 7.82111 39.6366 8.08809L39.3928 19.1711C39.3903 19.6178 39.0896 19.8937 38.6407 19.9471L35.6677 20.2999C35.1406 20.3624 34.8584 20.076 34.8995 19.5161L36.1589 2.37609C36.1861 1.92167 36.4623 1.65093 36.9112 1.59599L40.4361 1.18065C40.8849 1.1261 41.1857 1.3304 41.3338 1.76141L43.4039 8.03989C43.481 8.29258 43.6825 8.26918 43.7024 8.0022L44.3812 1.40339C44.4346 0.9464 44.682 0.678036 45.1347 0.624879L48.6559 0.206764C49.106 0.153408 49.4329 0.352747 49.5535 0.788912L54.44 17.2011ZM0.0511448 6.84081C-0.107957 6.30171 0.109672 5.95797 0.633003 5.89529L3.60593 5.54382C4.05843 5.49047 4.40788 5.68584 4.50599 6.12458L7.10844 16.8702C7.188 17.1269 7.38441 17.1035 7.40941 16.8339L7.90414 5.72214C7.93142 5.2705 8.20871 4.99698 8.65514 4.9462L10.8062 4.69232C11.2563 4.63777 11.5807 4.83671 11.7038 5.27447L14.5561 15.9888C14.6357 16.2466 14.8334 16.2232 14.8582 15.9537L15.102 4.87063C15.1056 4.419 15.4016 4.14686 15.8541 4.09331L18.8284 3.73926C19.353 3.67817 19.6377 3.96458 19.5928 4.52432L18.3346 21.6645C18.3086 22.1189 18.0313 22.3898 17.5836 22.438L14.0601 22.8585C13.6087 22.9131 13.3091 22.7102 13.1609 22.275L11.0909 16.0007C11.0125 15.748 10.8123 15.7702 10.7924 16.0398L10.1124 22.6372C10.0602 23.0981 9.81147 23.3637 9.36011 23.4183L5.83771 23.8338C5.38636 23.8884 5.0619 23.688 4.93879 23.253L0.0511448 6.84081ZM27.9397 2.18548C22.0175 2.88207 21.3076 7.66045 21.1771 9.42475L20.6661 16.1134C20.5331 17.8775 20.5242 22.5728 26.4478 21.871C32.3697 21.1665 33.0785 16.3921 33.2115 14.6252L33.72 7.94052C33.8543 6.17344 33.8619 1.48353 27.9397 2.18548ZM26.7932 17.267C24.9455 17.487 24.9145 16.2463 25.0724 14.1837L25.3634 10.335C25.52 8.27374 25.7401 7.00293 27.5916 6.78415C29.4417 6.56557 29.4703 7.80643 29.3148 9.86627L29.0201 13.7188C28.8684 15.776 28.646 17.0484 26.7932 17.267Z"
-        fill="#381451"
+        fill={fill}
       />
     </svg>
   );

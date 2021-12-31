@@ -1,11 +1,26 @@
-import { CardProps, Colors } from '../commons';
+import { CardProps } from '../models';
+import { Colors } from '../../commons';
 
 export const Card: React.FC<CardProps> = ({
   children,
-  color = Colors.blue,
-  className,
+  size = 'md',
+  className = '',
+  color = Colors.white,
 }) => {
-  const base = `truncate bg-${color} bg-${color}-400 shadow-md rounded-md font-bold text-xl border border-black p-3 w-14 h-16 flex justify-center items-center`;
+  const mapSize = new Map<string, string>();
 
-  return <div className={`${base} ${className || ''}`}>{children}</div>;
+  mapSize.set('sm', 'text-base w-14 h-16');
+  mapSize.set('md', 'text-xl w-16 h-20');
+  mapSize.set('xl', 'text-2xl w-20 h-24');
+
+  const tailwind = `m-1 truncate bg-${color} bg-${color}-400 shadow-md rounded-md font-bold text-xl border-2 border-black p-3 flex justify-center items-center`;
+  const sizeSelected = mapSize.get(size);
+
+  return (
+    <div className="inline-block">
+      <div className={`${tailwind} ${sizeSelected} ${className}`}>
+        {children}
+      </div>
+    </div>
+  );
 };

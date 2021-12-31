@@ -1,6 +1,7 @@
 import { Meta, Story, Canvas, Preview, Source } from '@storybook/addon-docs';
 
 import { Card } from './';
+import { Colors } from '../../commons.ts';
 import dedent from 'ts-dedent';
 
 <Meta title="Atoms/Card" component={Card} />
@@ -9,7 +10,7 @@ import dedent from 'ts-dedent';
 
 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias totam quis, dignissimos quae, id nihil facilis eveniet atque consequatur nemo officia? Id ipsa expedita nulla nesciunt, tenetur magnam laboriosam pariatur!
 
-## **Pautas de uso**
+## **Uso**
 
 - They have patterned drop shadow to indicate that are outside the normal document flow.
 - This is a shared component for Toast, Dialog, and Coachmark; before using this component directly please check that these components do not cover your use case!
@@ -18,16 +19,36 @@ Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias totam quis, dign
   {Card.bind({})}
 </Story>
 
-## **Variantes**
+## **Tamaños**
 
 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias totam quis, dignissimos quae, id nihil facilis eveniet atque consequatur nemo officia? Id ipsa expedita nulla nesciunt, tenetur magnam laboriosam pariatur!
 
 <Canvas>
-  <Story name="Primary" args={{ color: 'red', children: '10' }}>
-    {Card.bind({})}
+  <Story name="Tamaños">
+    <Card size="sm">10</Card>
+    <Card size="md">20</Card>
+    <Card size="xl">☕️</Card>
   </Story>
-  <Story name="Secondary" args={{ color: 'lime', children: '?' }}>
-    {Card.bind({})}
+</Canvas>
+
+## **Colores**
+
+Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias totam quis, dignissimos quae, id nihil facilis eveniet atque consequatur nemo officia? Id ipsa expedita nulla nesciunt, tenetur magnam laboriosam pariatur!
+
+<Canvas>
+  <Story name="Colores">
+    <Card color={Colors.red}>1</Card>
+    <Card color={Colors.gray}>?</Card>
+    <Card color={Colors.cyan}>2</Card>
+    <Card color={Colors.blue}>3</Card>
+    <Card color={Colors.lime}>5</Card>
+    <Card color={Colors.green}>8</Card>
+    <Card color={Colors.teal}>13</Card>
+    <Card color={Colors.esmerald}>21</Card>
+    <Card color={Colors.esmerald}>34</Card>
+    <Card color={Colors.esmerald}>55</Card>
+    <Card color={Colors.esmerald}>89</Card>
+    <Card color={Colors.esmerald}>144</Card>
   </Story>
 </Canvas>
 

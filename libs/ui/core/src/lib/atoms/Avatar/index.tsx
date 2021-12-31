@@ -1,8 +1,10 @@
-import { useState } from 'react';
-import { AvatarProps, ColorsExadecimals } from '../commons';
+import { Colors } from '../../commons';
+import { AvatarProps } from '../models';
+
+import { getColorHEX } from '../../utils/colors';
 
 export const Avatar: React.FC<AvatarProps> = ({
-  color = ColorsExadecimals.white,
+  color = Colors.teal,
   size = 'md',
 }) => {
   let currentSize = 46;
@@ -12,8 +14,12 @@ export const Avatar: React.FC<AvatarProps> = ({
   if (size === 'xl') {
     currentSize = 56;
   }
-
-  return <Svg size={currentSize} fill={color} />;
+  const colorSelected = getColorHEX(color);
+  return (
+    <div className="inline-block">
+      <Svg size={currentSize} fill={colorSelected} />
+    </div>
+  );
 };
 
 interface SvgProps {

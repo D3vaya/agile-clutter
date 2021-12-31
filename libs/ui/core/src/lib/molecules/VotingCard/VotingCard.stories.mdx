@@ -1,14 +1,11 @@
 import { Meta, Story, Canvas, Preview, Source } from '@storybook/addon-docs';
 
 import { VotingCard } from './index.tsx';
+import { Colors } from '../../commons.ts';
 import { Card, Avatar } from '../../atoms/';
 import dedent from 'ts-dedent';
 
 <Meta title="Molecules/VotingCard" component={VotingCard} />
-
-export const Template = (args) => <VotingCard {...args} />;
-export const TemplateCard = (argsC) => <Card {...argsC} />;
-export const TemplateAvatar = (argsA) => <Avatar {...argsA} />;
 
 # Component
 
@@ -20,8 +17,20 @@ Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias totam quis, dign
 - This is a shared component for Toast, Dialog, and Coachmark; before using this component directly please check that these components do not cover your use case!
 
 <Canvas>
-  <Story name="Default" args={{}}>
-    {Template.bind({})}
+  <Story name="Default">
+    <VotingCard />
+  </Story>
+</Canvas>
+
+## **Estados**
+
+Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias totam quis, dignissimos quae, id nihil facilis eveniet atque consequatur nemo officia? Id ipsa expedita nulla nesciunt, tenetur magnam laboriosam pariatur!
+
+<Canvas>
+  <Story name="Estados">
+    <VotingCard state="voting" avatarColor="teal" />
+    <VotingCard state="voted" avatarColor="teal" />
+    <VotingCard state="viewVote" vote="10" avatarColor="teal" />
   </Story>
 </Canvas>
 

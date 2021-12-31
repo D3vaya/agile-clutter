@@ -1,14 +1,3 @@
-export interface AvatarProps {
-  color?: ColorsExadecimals;
-  size?: 'sm' | 'md' | 'xl';
-}
-export interface CardProps {
-  color?: Colors;
-  className?: string;
-  //variant?: 'voting' | 'voted' | 'voting-user' | 'default';
-  children?: React.ReactElement | React.ReactElement[];
-}
-
 export enum ColorsExadecimals {
   sky = '#38bdf8',
   red = '#f87171',
