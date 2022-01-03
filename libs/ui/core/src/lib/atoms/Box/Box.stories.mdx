@@ -1,0 +1,60 @@
+import { Meta, Story, Canvas, Preview, Source } from '@storybook/addon-docs';
+
+import Box from './';
+import { Colors } from '../../commons.ts';
+import dedent from 'ts-dedent';
+
+<Meta title="Atoms/Box" component={Box} />
+
+export const Template = (args) => <Box {...args} />;
+
+# Box
+
+Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias totam quis, dignissimos quae, id nihil facilis eveniet atque consequatur nemo officia? Id ipsa expedita nulla nesciunt, tenetur magnam laboriosam pariatur!
+
+## **Pautas de uso**
+
+- They have patterned drop shadow to indicate that are outside the normal document flow.
+- This is a shared component for Toast, Dialog, and Coachmark; before using this component directly please check that these components do not cover your use case!
+
+<Story
+  name="Default"
+  args={{
+    color: Colors.red,
+    children: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+  }}
+>
+  {Template.bind({})}
+</Story>
+
+## **Variantes**
+
+Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias totam quis, dignissimos quae, id nihil facilis eveniet atque consequatur nemo officia? Id ipsa expedita nulla nesciunt, tenetur magnam laboriosam pariatur!
+
+<Canvas>
+  <Story
+    name="Shadow-XL"
+    args={{
+      shadow: 'lg',
+      children: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Tipado del componente
+
+detalle de la interfaz de las propiedades de **Component**
+
+<Source
+  language="typescript"
+  code={dedent`
+    export interface BoxProps {
+      color?: Colors;
+      className?: string;
+      shadow?: 'md' | 'lg' | 'none';
+      children?: React.ReactElement | React.ReactElement[];
+    }
+`}
+/>

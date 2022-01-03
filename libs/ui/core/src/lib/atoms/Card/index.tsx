@@ -7,14 +7,14 @@ export const Card: React.FC<CardProps> = ({
   className = '',
   color = Colors.white,
 }) => {
-  const mapSize = new Map<string, string>();
+  const mapSize = {
+    sm: 'text-base w-14 h-16',
+    md: 'text-xl w-16 h-20',
+    xl: 'text-2xl w-20 h-24',
+  };
 
-  mapSize.set('sm', 'text-base w-14 h-16');
-  mapSize.set('md', 'text-xl w-16 h-20');
-  mapSize.set('xl', 'text-2xl w-20 h-24');
-
-  const tailwind = `m-1 truncate bg-${color} bg-${color}-400 shadow-md rounded-md font-bold text-xl border-2 border-black p-3 flex justify-center items-center`;
-  const sizeSelected = mapSize.get(size);
+  const tailwind = `m-1 truncate bg-${color} bg-${color}-400 shadow-md rounded-md font-bold text-2xl border-2 border-black p-3 flex justify-center items-center`;
+  const sizeSelected = mapSize[size];
 
   return (
     <div className="inline-block">

@@ -1,0 +1,21 @@
+import { Meta, Story, Canvas, Preview, Source } from '@storybook/addon-docs';
+
+import AppLogo from './';
+import dedent from 'ts-dedent';
+
+<Meta title="Atoms/AppLogo" component={AppLogo} />
+
+export const Template = (args) => <AppLogo {...args} />;
+
+# Component
+
+Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias totam quis, dignissimos quae, id nihil facilis eveniet atque consequatur nemo officia? Id ipsa expedita nulla nesciunt, tenetur magnam laboriosam pariatur!
+
+## **Pautas de uso**
+
+- They have patterned drop shadow to indicate that are outside the normal document flow.
+- This is a shared component for Toast, Dialog, and Coachmark; before using this component directly please check that these components do not cover your use case!
+
+<Story name="Default" args={{}}>
+  {Template.bind({})}
+</Story>
