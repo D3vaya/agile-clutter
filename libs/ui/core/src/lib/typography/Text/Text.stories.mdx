@@ -1,0 +1,122 @@
+import { Meta, Story, Canvas, Preview, Source } from '@storybook/addon-docs';
+
+import Text from './';
+import dedent from 'ts-dedent';
+
+<Meta title="Typography/Text" component={Text} />
+
+export const Template = (args) => <Component {...args} />;
+
+# Component
+
+Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias totam quis, dignissimos quae, id nihil facilis eveniet atque consequatur nemo officia? Id ipsa expedita nulla nesciunt, tenetur magnam laboriosam pariatur!
+
+## **Pautas de uso**
+
+- They have patterned drop shadow to indicate that are outside the normal document flow.
+- This is a shared component for Toast, Dialog, and Coachmark; before using this component directly please check that these components do not cover your use case!
+
+<Story
+  name="Default"
+  args={{
+    children:
+      'This is a shared component for Toast, Dialog, and Coachmark; before using this component directly please check that these components do not cover your use case!',
+  }}
+>
+  {Template.bind({})}
+</Story>
+
+## **Variantes**
+
+Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias totam quis, dignissimos quae, id nihil facilis eveniet atque consequatur nemo officia? Id ipsa expedita nulla nesciunt, tenetur magnam laboriosam pariatur!
+
+<Canvas>
+  <Story name="Tamaños">
+    <Text size="sm">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias totam
+      quis, dignissimos quae, id nihil facilis eveniet atque consequatur nemo
+      officia? Id ipsa expedita nulla nesciunt, tenetur magnam laboriosam
+      pariatur!
+    </Text>
+    <br />
+    <Text size="base">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias totam
+      quis, dignissimos quae, id nihil facilis eveniet atque consequatur nemo
+      officia? Id ipsa expedita nulla nesciunt, tenetur magnam laboriosam
+      pariatur!
+    </Text>
+    <br />
+    <Text size="lg">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias totam
+      quis, dignissimos quae, id nihil facilis eveniet atque consequatur nemo
+      officia? Id ipsa expedita nulla nesciunt, tenetur magnam laboriosam
+      pariatur!
+    </Text>
+    <br />
+    <Text size="xl">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias totam
+      quis, dignissimos quae, id nihil facilis eveniet atque consequatur nemo
+      officia? Id ipsa expedita nulla nesciunt, tenetur magnam laboriosam
+      pariatur!
+    </Text>
+    <br />
+    <Text size="2xl">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias totam
+      quis, dignissimos quae, id nihil facilis eveniet atque consequatur nemo
+      officia? Id ipsa expedita nulla nesciunt, tenetur magnam laboriosam
+      pariatur!
+    </Text>
+    <br />
+    <Text size="3xl">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias totam
+      quis, dignissimos quae, id nihil facilis eveniet atque consequatur nemo
+      officia? Id ipsa expedita nulla nesciunt, tenetur magnam laboriosam
+      pariatur!
+    </Text>
+    <br />
+    <Text size="4xl">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias totam
+      quis, dignissimos quae, id nihil facilis eveniet atque consequatur nemo
+      officia? Id ipsa expedita nulla nesciunt, te
+    </Text>
+    <br />
+    <Text size="5xl">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias totam
+      quis, dignissimos quae, id nihil facilis eveniet atque consequatur nemo
+      officia? Id ipsa expedita n
+    </Text>
+    <br />
+    <Text size="6xl">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias totam
+      quis, dignissimos quae, id nihil facilis eveniet atque consequatur
+    </Text>
+    <br />
+    <Text size="7xl">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias totam
+      quis, dignissimos
+    </Text>
+    <br />
+    <Text size="8xl">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias tot
+    </Text>
+    <br />
+    <Text size="9xl">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+    </Text>
+  </Story>
+</Canvas>
+
+## Tipado del componente
+
+detalle de la interfaz de las propiedades de **Component**
+
+<Source
+  language="typescript"
+  code={dedent`
+    export interface TextProps {
+      size?: 'sm' | 'base' | 'lg' | 'xl' | '2xl';
+      children?: React.ReactElement | React.ReactElement[];
+      className?: string;
+    }
+  `}
+/>
